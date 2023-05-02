@@ -1,0 +1,208 @@
+.nav,
+main {
+    display: none;
+}
+
+body {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.mobile-nav {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.mobile-navigators {
+    width: 85vw;
+    height: 80px;
+    display: grid;
+    grid-template-columns: 90% auto;
+    align-items: center;
+}
+
+.mobile-snap-div>a {
+    margin-top: 0px;
+    text-decoration: none;
+    color: black;
+}
+
+.mobile-snap-div>a>h1 {
+    margin-top: 0px;
+}
+
+.mobile-hero {
+    height: 50vh;
+    width: 100%;
+}
+
+.texts {
+    text-align: center;
+}
+
+.texts>h1 {
+    font-size: 3em;
+}
+
+.texts>p {
+    font-size: 1.359em;
+    color: hsl(0, 0%, 41%);
+    margin-bottom: 50px;
+}
+
+.mobile-learn-more {
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    border: 0px;
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: all 0.3s 0.1s;
+}
+
+.mobile-learn-more:hover {
+    color: black;
+    background-color: white;
+    border: 1px solid;
+    font-weight: bold;
+}
+
+.mobile-images-div {
+    margin-top: 50px;
+    height: 100px;
+}
+
+.mobile-images-div>img {
+    margin-right: 20px;
+    display: inline;
+}
+
+img[alt="client-maker"] {
+    margin-right: 0px;
+}
+
+.mobile-navbar {
+    display: none;
+    background-color: white;
+    position: fixed;
+    height: 100%;
+    width: 65vw;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .75);
+    height: 100%;
+    width: 100%;
+}
+
+.mobile-navbar.open {
+    display: block;
+}
+
+.overlay.open {
+    display: block;
+}
+
+.close-icon-div {
+    cursor: pointer;
+    margin-top: 4vh;
+    width: 90%;
+    display: flex;
+    justify-content: end;
+}
+
+.navs {
+    margin-left: 7vw;
+}
+
+.navs>h2 {
+    color: hsl(0, 0%, 41%);
+    font-weight: lighter;
+    cursor: pointer;
+    width: 28vw;
+    transition: all 0.3s 0.1s;
+}
+
+.navs>h2:hover {
+    color: hsl(0, 0%, 8%);
+}
+
+.login-register {
+    margin-top: 5vh;
+    margin-left: 7vw;
+}
+
+.login-register>div {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    height: 40px;
+    color: hsl(0, 0%, 41%);
+    border-radius: 10px;
+    transition: all 0.3s 0.1s;
+}
+
+.login-register>div:hover {
+    color: hsl(0, 0%, 8%);
+}
+
+.mobile-register-div {
+    border: 1px solid hsl(0, 0%, 41%);
+    transition: all 0.3s 0.1s;
+}
+
+.mobile-register-div:hover {
+    border-color: hsl(0, 0%, 8%);
+}
+
+.mobile-features-dropdown-div {
+    display: none;
+    margin-top: 3vh;
+}
+
+.mobile-feature-item {
+    display: grid;
+    grid-template-columns: 12% auto;
+    margin-left: 7vw;
+}
+
+.mobile-feature-item>p {
+    margin-top: 0px;
+    font-size: 1.2em;
+    color: hsl(0, 0%, 41%);
+}
+
+.mobile-company-dropdown-div {
+    display: none;
+    margin-left: 7vw;
+    color: hsl(0, 0%, 41%);
+    font-size: 1.2em;
+}
+
+.dropdown {
+    display: block;
+}
+
+h2>img {
+    margin-left: 3vw;
+    margin-bottom: .6vh;
+}
+
+.menu-icon {
+    cursor: pointer;
+}

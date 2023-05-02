@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css" media="screen and (min-width: 1000px)">
+  <link rel="stylesheet" href="styles2.css" media="screen and (max-width: 1000px)">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500;700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body {
+      font-family: 'Kumbh Sans', sans-serif;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <div class="nav">
+    <div class="navigators">
+      <div class="links-div">
+        <a href="#" class="snap">
+          <h1>snap</h1>
+        </a>
+        <div class="links">
+          <div class="div-link">
+            <p onclick="showFeatures()" data-ptag>Features</p>
+            <img src="images\icon-arrow-down.svg" alt="icon-arrow-down" class="features-arrowdown-icon"
+              onclick="showFeatures()">
+            <!-- <img src="images\icon-arrow-up.svg" alt="icon-arrow-up" class="features-arrowup-icon"> -->
+            <div class="features-dropdown-div">
+              <div class="feature-item feature-item1">
+                <img src="images\icon-todo.svg" alt="icon-planning">
+                <p>Todo List</p>
+              </div>
+              <div class="feature-item">
+                <img src="images\icon-calendar.svg" alt="icon-calendar">
+                <p>Calendar</p>
+              </div>
+              <div class="feature-item">
+                <img src="images\icon-reminders.svg" alt="icon-calendar">
+                <p>Reminders</p>
+              </div>
+              <div class="feature-item">
+                <img src="images\icon-planning.svg" alt="icon-calendar">
+                <p>Planning</p>
+              </div>
+            </div>
+          </div>
+          <div class="div-link">
+            <p onclick="showCompany()">Company</p>
+            <img src="images\icon-arrow-down.svg" alt="icon-arrow-down" id="company-dropdown-icon"
+              onclick="showCompany()">
+            <div class="company-dropdown-div">
+              <div class="company-history">
+                <p>History</p>
+              </div>
+              <div class="company-team">
+                <p>Our Team</p>
+              </div>
+              <div class="company-blog">
+                <p>Blog</p>
+              </div>
+            </div>
+          </div>
+          <div class="div-link">
+            <p>Careers</p>
+          </div>
+          <div class="div-link">
+            <p>About</p>
+          </div>
+        </div>
+      </div>
+      <div class="login-register-div">
+        <div class="login-div">
+          Login
+        </div>
+        <div class="register-div">
+          Register
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-nav">
+    <div class="mobile-navigators">
+      <div class="mobile-snap-div">
+        <a href="#">
+          <h1>snap</h1>
+        </a>
+      </div>
+      <div class="nav-icon-div">
+        <img src="images\icon-menu.svg" alt="icon-menu" class="menu-icon">
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay"></div>
+  <div class="mobile-navbar">
+    <div class="close-icon-div">
+      <img src="images\icon-close-menu.svg" alt="icon-close-menu" class="close-menu-icon">
+    </div>
+    <div class="navs">
+      <h2 id="features">Features <img src="images\icon-arrow-down.svg" alt="icon-arrow-down" class="mobile-dropdown1">
+      </h2>
+      <div class="mobile-features-dropdown-div">
+        <div class="mobile-feature-item mobile-feature-item1">
+          <img src="images\icon-todo.svg" alt="icon-planning">
+          <p>Todo List</p>
+        </div>
+        <div class="mobile-feature-item">
+          <img src="images\icon-calendar.svg" alt="icon-calendar">
+          <p>Calendar</p>
+        </div>
+        <div class="mobile-feature-item">
+          <img src="images\icon-reminders.svg" alt="icon-calendar">
+          <p>Reminders</p>
+        </div>
+        <div class="mobile-feature-item">
+          <img src="images\icon-planning.svg" alt="icon-calendar">
+          <p>Planning</p>
+        </div>
+      </div>
+      <h2 class="company">Company <img src="images\icon-arrow-down.svg" alt="icon-arrow-down" class="mobile-dropdown2">
+      </h2>
+      <div class="mobile-company-dropdown-div">
+        <div class="mobile-company-history">
+          <p>History</p>
+        </div>
+        <div class="mobile-company-team">
+          <p>Our Team</p>
+        </div>
+        <div class="mobile-company-blog">
+          <p>Blog</p>
+        </div>
+      </div>
+      <h2>History</h2>
+      <h2>About</h2>
+    </div>
+    <div class="login-register">
+      <div class="mobile-login-div">
+        <p>Login</p>
+      </div>
+      <div class="mobile-register-div">
+        <p>Register</p>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div class="main-content">
+      <div class="content">
+        <div class="info">
+          <div class="texts">
+            <h1>Make<br>remote work</h1>
+            <p>Get your team in sync, no matter your location.<br>Streamline processes,
+              create team rituals, and<br>watch productivity soar.
+            </p>
+            <button class="learn-more-btn">Learn More</button>
+          </div>
+          <div class="images">
+            <img src="images\client-databiz.svg" alt="client-databiz">
+            <img src="images\client-audiophile.svg" alt="client-audiophile">
+            <img src="images\client-meet.svg" alt="client-meet">
+            <img src="images\client-maker.svg" alt="client-maker">
+          </div>
+        </div>
+        <div class="hero-img-div">
+          <img src="images\image-hero-desktop.png" alt="image-hero-desktop" class="desktop-hero">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="mobile-main">
+    <div class="mobile-main-content">
+      <div class="mobile-content">
+        <div class="mobile-hero-div">
+          <img src="images\image-hero-mobile.png" alt="image-hero-mobile" class="mobile-hero">
+        </div>
+        <div class="mobile-info">
+          <div class="texts">
+            <h1>Make Remote Work</h1>
+            <p>Get your team in sync, no matter your<br>location. Streamline processes,
+              create<br>team rituals, and watch productivity soar.
+            </p>
+            <div class="mobile-learnmore-div">
+              <button class="mobile-learn-more">Learn More</button>
+            </div>
+            <div class="mobile-images-div">
+              <img src="images\client-databiz.svg" alt="client-databiz">
+              <img src="images\client-audiophile.svg" alt="client-audiophile">
+              <img src="images\client-meet.svg" alt="client-meet">
+              <img src="images\client-maker.svg" alt="client-maker">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
+
+<!-- Features
+  Company
+  Careers
+  About
+
+  Login
+  Register
+
+  Make remote work
+
+  Get your team in sync, no matter your location. Streamline processes, 
+  create team rituals, and watch productivity soar.
+
+  Learn more
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->

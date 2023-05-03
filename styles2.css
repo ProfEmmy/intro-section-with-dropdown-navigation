@@ -33,7 +33,7 @@ body {
 }
 
 .mobile-hero {
-    height: 50vh;
+    /* height: 50vh; */
     width: 100%;
 }
 
@@ -42,11 +42,11 @@ body {
 }
 
 .texts>h1 {
-    font-size: 3em;
+    /* font-size: 3em; */
 }
 
 .texts>p {
-    font-size: 1.359em;
+    /* font-size: 1.359em; */
     color: hsl(0, 0%, 41%);
     margin-bottom: 50px;
 }
@@ -77,8 +77,10 @@ body {
 }
 
 .mobile-images-div>img {
+    width: auto;
+    height: auto;
     margin-right: 20px;
-    display: inline;
+    display: inline-block;
 }
 
 img[alt="client-maker"] {
@@ -130,7 +132,8 @@ img[alt="client-maker"] {
 
 .navs>h2 {
     color: hsl(0, 0%, 41%);
-    font-weight: lighter;
+    font-size: auto;
+    font-weight: 500;
     cursor: pointer;
     width: 28vw;
     transition: all 0.3s 0.1s;
